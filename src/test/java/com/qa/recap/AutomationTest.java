@@ -35,35 +35,35 @@ public class AutomationTest {
 		timeouts.pageLoadTimeout(Duration.ofSeconds(15));
 	}
 	
-//	@Test
-//	public void testSelect() throws InterruptedException {
-//		Actions action = new Actions(driver);
-//		driver.get("http://way2automation.com/way2auto_jquery/selectable.php#load_box");
-//		
-//		WebElement serialize = driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[1]/div[1]/div[1]/ul/li[3]/a"));
-//		action.click(serialize);
-//		Thread.sleep(500);
-//		
-//		
-//		WebElement selectable = driver.findElement(By.cssSelector("#selectable > li.ui-widget-content.ui-selectee.ui-selected"));	
-//		
-//		action.click(selectable);
-//		
-//		action.build()
-//				.perform();
-//		Thread.sleep(1000);
-//		
-//	}
+	@Test
+	public void testSelect() throws InterruptedException {
+		Actions action = new Actions(driver);
+		driver.get("http://way2automation.com/way2auto_jquery/selectable.php#load_box");
+		
+		WebElement serialize = driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[1]/div[1]/div[1]/ul/li[3]/a"));
+		action.click(serialize);
+		Thread.sleep(500);
+		
+		
+		WebElement selectable = driver.findElement(By.cssSelector("#selectable > li.ui-widget-content.ui-selectee.ui-selected"));	
+		
+		action.click(selectable);
+		
+		action.build()
+				.perform();
+		Thread.sleep(1000);
+		
+	}
 	
 	@Test
 	public void testAlert() throws InterruptedException {
 		driver.get("http://way2automation.com/way2auto_jquery/alert.php#load_box");
 		
 
-//		Actions actions = new Actions(driver);
-//		WebElement alertButton = driver.findElement(By.xpath("/html/body/button"));
+		Actions actions = new Actions(driver);
+		WebElement alertButton = driver.findElement(By.xpath("/html/body/button"));
 		Alert alert = driver.switchTo().alert();
-//		actions.click(alertButton);
+		actions.click(alertButton);
 		Thread.sleep(500);
 		alert.accept();
 		
